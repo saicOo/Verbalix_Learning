@@ -1,0 +1,23 @@
+<?php
+
+namespace App\Http\Controllers\Front;
+
+use App\Models\Comment;
+use Illuminate\Http\Request;
+use App\Http\Controllers\Controller;
+
+class CommentController extends Controller
+{
+    
+    public function __construct()
+    {
+        $this->middleware('auth');
+    }
+
+    public function destroy(Comment $comment)
+    {
+        $comment->delete();
+        session()->flash('success', 'deleted successfully');
+        return redirect()->back();
+    }
+}

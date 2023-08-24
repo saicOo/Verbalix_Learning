@@ -1,0 +1,257 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300;400;700&display=swap" rel="stylesheet');
+/* Start Global Style */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto Condensed', sans-serif;
+    scroll-behavior: smooth;
+  }
+
+  ul{
+    list-style: none;
+  }
+  section{
+    padding: 40px 0 100px;
+  }
+  .heading h1{
+    text-align: center;
+    color: rgb(34, 146, 146);
+    font-weight: bolder;
+    text-transform: uppercase;
+  }
+  .card-header{
+    font-weight: 700!important;
+    background-color: lightblue;
+    color: #ffffff;
+  }
+/* End Global Style */
+/* start header */
+body .window-scroll{
+  background: linear-gradient( #89CFF0 , #67a9c7);
+}
+/* end header */
+/* start banner */
+.banner{
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5),rgba(0, 0, 0, 0.884)) ,url(../image/banner.jpg);
+    background-size: 100% 100%;
+    /* background-attachment: fixed; */
+    background-repeat: no-repeat;
+    height: 300px;
+    color: white;
+    padding-top: 150px;
+}
+.banner .breadcrumb .breadcrumb-item a{
+  color: #ffffff;
+}
+/* end banner */
+/* Start Homepage Slideshow */
+.slideshow{
+  height: 100vh;
+  position: relative;
+}
+.slideshow .overlay{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: #000000ab;
+  z-index: 1;
+}
+.slideshow .carousel img{
+  height: 100vh;
+  width: 100%;
+  object-fit: cover;
+}
+.slideshow .carousel-caption{
+  top: 50%;
+  width: 50%;
+  margin: auto;
+}
+.counter {
+  padding: 80px 0;
+  border-radius: 5px;
+}
+
+.count-title {
+  font-size: 40px;
+  font-weight: normal;
+  margin-top: 10px;
+  margin-bottom: 0;
+  text-align: center;
+}
+
+.count-text {
+  font-size: 13px;
+  font-weight: normal;
+  margin-top: 10px;
+  margin-bottom: 0;
+  text-align: center;
+}
+
+.fa-2x {
+  margin: 0 auto;
+  float: none;
+  display: table;
+  color: #229292;;
+}
+/* End Homepage Slideshow */
+
+/* Start Semester Page  */
+.semesters .card-semester{
+  max-width: 300px;
+  border: 4px rgb(0, 166, 255) solid ;
+  margin: 15px auto;
+  padding: 30px;
+  box-shadow: 20px 20px lightblue;
+}
+
+.card-semester img{
+  width: 100%;
+  margin: auto;
+}
+/* End Semester Page */
+/* Start Levels Page & Units Page */
+.units .card,
+.levels .card{
+  border: 0px ;
+  margin: 0 auto;
+  text-align: center;
+  box-shadow: 20px 20px lightblue;
+}
+.units .card img,
+.levels .card img{
+  height: 250px;
+  /* object-fit: cover; */
+}
+/* End Levels Page & Units Page */
+/* Start Subject Page */
+.card-inner{
+  margin-left: 4rem;
+}
+/* End Subject Page */
+
+/* Start quizzes Page */
+#quizzes .options-box{
+  padding: 20px 0 30px;
+}
+#quizzes .options-box .options{
+  position: relative;
+  padding-left: 40px;
+}
+#quizzes .options-box label{
+  display: block;
+  margin-bottom: 15px;
+  font-size: 14px;
+  cursor: pointer;
+}
+#quizzes .options-box .options input{
+  opacity: 0;
+}
+#quizzes .options-box .checkmark {
+  position: absolute;
+  top: -1px;
+  left: 0;
+  height: 25px;
+  width: 25px;
+  background-color: #24262b;
+  border: 1px solid #ddd;
+  border-radius: 50%;
+}
+#quizzes .options-box .options input:checked ~ .checkmark:after {
+  display: block;
+}
+#quizzes .options-box .options .checkmark:after{
+  content: "";
+width: 10px;
+  height: 10px;
+  display: block;
+background: white;
+  position: absolute;
+  top: 50%;
+left: 50%;
+  border-radius: 50%;
+  transform: translate(-50%,-50%) scale(0);
+  transition: 300ms ease-in-out 0s;
+}
+#quizzes .options-box .options input[type="radio"]:checked ~ .checkmark{
+  background: #21bf73;
+  transition: 300ms ease-in-out 0s;
+}
+#quizzes .options-box .options input[type="radio"]:checked ~ .checkmark:after{
+  transform: translate(-50%,-50%) scale(1);
+}
+/* END quizzes Page */
+/* Start Profile Page */
+.profile .image-profile{
+  margin: 10px 0 30px;
+  padding: 10px;
+  background-color: #67a9c7;
+}
+.profile .image-profile img{
+  padding: 5px;
+  border: 5px solid #77bbdb;
+  background-color: #bfd4db;
+}
+.profile tr{
+  border-bottom: 2px dashed lightblue;
+}
+/* END Profile Page */
+/*//////////////////////////////////////////// Footer//////////////////////////////////////////*/
+.footer{
+	background-color: #24262b;
+    padding: 50px 0;
+}
+
+footer h4{
+	font-size: 18px;
+	color: #ffffff;
+	text-transform: capitalize;
+	margin-bottom: 35px;
+	font-weight: 500;
+	position: relative;
+}
+footer h4::before{
+	content: '';
+	position: absolute;
+
+	bottom: -10px;
+	background-color: #e91e63;
+	height: 2px;
+	box-sizing: border-box;
+	width: 50px;
+}
+footer ul li:not(:last-child){
+	margin-bottom: 10px;
+}
+footer ul li a{
+	font-size: 16px;
+	text-transform: capitalize;
+	color: #ffffff;
+	text-decoration: none;
+	font-weight: 300;
+	color: #bbbbbb;
+	display: block;
+	transition: all 0.3s ease;
+}
+footer ul li a:hover{
+	color: #ffffff;
+	padding-left: 8px;
+}
+footer .social-links a{
+	display: inline-block;
+	height: 40px;
+	width: 40px;
+	background-color: rgba(255,255,255,0.2);
+	margin:0 10px 10px 0;
+	text-align: center;
+	line-height: 40px;
+	border-radius: 50%;
+	color: #ffffff;
+	transition: all 0.5s ease;
+}
+footer .social-links a:hover{
+	color: #24262b;
+	background-color: #ffffff;
+}
+
