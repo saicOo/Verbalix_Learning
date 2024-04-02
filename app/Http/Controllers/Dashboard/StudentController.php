@@ -11,7 +11,7 @@ class StudentController extends Controller
 
     public function index(Request $request)
     {
-        $students = User::where('role','Student')->when($request->parent_id,function ($query) use ($request){
+        $students = User::when($request->parent_id,function ($query) use ($request){
             return $query->where('user_id',$request->parent_id);
         })->latest()->paginate(10);
         return view('dashboard.students.index', compact('students'));
